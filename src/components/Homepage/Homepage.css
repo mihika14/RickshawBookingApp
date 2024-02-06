@@ -1,0 +1,67 @@
+.homepage {
+    background-image: url('./rickshaw.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+  
+  .apptext{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: -5px;
+    margin: 5px;
+    border-radius: 32px; 
+  }
+
+  .apptitle{
+    font-size: 15em;
+    font-weight: bold;
+    margin-bottom: -2px;
+  }
+  
+  .booking {
+    font-size: 5em;
+    margin-bottom: 5px;
+  }
+  
+  .appslogan {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .appdescr {
+    text-align: left;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .login-signup {
+    margin-top: 30px;
+    font-size: 4em;
+  }
+  
+  .driverlogin {
+    font-family: PlusJakartaSans, -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif;
+    font-size: 1rem;
+    align-items: center;
+    height: 48px;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    padding: 0 1.2rem;
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(143, 142, 142, 0.15) !important;
+    margin-right: 10px;
+    background: #000000;
+  }
+  
+  .driverlogin:hover {
+    background: #2b2a2a;
+  }
