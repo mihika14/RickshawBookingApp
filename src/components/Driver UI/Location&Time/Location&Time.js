@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function LocationTime() {
   const [position, setPosition] = useState({ latitude: null, longitude: null });
   const [startTimings, setStartTimings] = useState("");
   const [endTimings, setEndTimings] = useState("");
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -25,14 +28,27 @@ function LocationTime() {
   }, []);
 
   const handleLocationUpdate = () => {
-    // Handle the logic to update the form with the obtained location
     console.log("Location Updated:", position);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add logic to handle the form submission with startTimings, endTimings, and location
-    console.log("Form Submitted:", { startTimings, endTimings, position });
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/driverlocationandtime",
+        {
+          startTiming: startTimings,
+          endTiming: endTimings,
+          latitude: position.latitude,
+          longitude: position.longitude,
+        }
+      );
+      setSuccess(true);
+      setError(null);
+    } catch (error) {
+      setError(error.response?.data.message || "Failed to store data");
+      setSuccess(false);
+    }
   };
 
   return (
@@ -71,6 +87,9 @@ function LocationTime() {
         <button type="submit" className="submit">
           Submit
         </button>
+
+        {success && <p className="success">Data stored successfully</p>}
+        {error && <p className="error">{error}</p>}
 
         <p className="signin">
           Don't have an account? <Link to="/driverregister">SignUp</Link>{" "}

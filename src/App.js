@@ -1,11 +1,12 @@
 import "./App.css";
 import LoginForm from "./components/Driver UI/LoginForm&SignUp/LoginForm";
-import { Route, Routes } from "react-router-dom";
 import SignUp from "./components/Driver UI/LoginForm&SignUp/Signup";
 import Homepage from "./components/Homepage/Homepage";
-import LocationTime from "./components/Driver UI/Location&Time/Location&Time";
 import DriverHomepage from "./components/Driver UI/DriverHomepage/DriverHomepage";
-import RatingsTable from "./components/Driver UI/RatingsTable/RatingsTable";
+import LoginCust from "./components/Customer UI/Login&Register/LoginCust";
+import RegisterCust from "./components/Customer UI/Login&Register/RegisterCust";
+import UserHome from "./components/Customer UI/UserHomepage/UserHome";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Route exact path="/driverlogin" element={<LoginForm />} />
         <Route exact path="/driverregister" element={<SignUp />} />
         <Route exact path="/driverhomepage" element={<DriverHomepage />} />
+        <Route exact path="/customerlogin" element={<LoginCust />} />
+        <Route exact path="/customerregister" element={<RegisterCust />} />
+        <Route exact path="/customerhomepage" element={<UserHome />} />
       </Routes>
     </div>
   );

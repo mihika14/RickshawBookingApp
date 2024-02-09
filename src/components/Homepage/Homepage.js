@@ -21,9 +21,11 @@ const Homepage = () => {
           Login as Driver
         </button>
         </Link>
+        <Link to= '/customerlogin'>
         <button className="driverlogin">
           Login as Customer
         </button>
+        </Link>
       </div>
     </div>
   );
