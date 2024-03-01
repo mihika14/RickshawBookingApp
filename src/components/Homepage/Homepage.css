@@ -1,67 +1,140 @@
-.homepage {
-    background-image: url('./rickshaw.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+.rickshaw-gif {
+  height: 200px;
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 9999;
+  animation: moveRight 30s linear infinite;
+}
+
+.rickshaw2-gif {
+  height: 200px;
+  z-index: 9999;
+  transform: scaleX(-1);
+  animation: moveLeft 30s linear infinite;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+ 
+}
+
+@keyframes moveRight {
+  0% {
+    left: -70px;
   }
+  100% {
+    left: calc(100% + 60px);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    right: -70px;
+  }
+  100% {
+    right: calc(100% + 60px);
+  }
+}
+
+.homepage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.apptext {
+  height: 582px;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 32px;
+  box-shadow: 0rem -0.5rem 3.1rem #ffad01 !important;
+}
+
+.apptitle {
+  margin-top: 10px;
+  font-weight: 1000;
+  position: relative; 
+  font-size: 12em;
+  font-family: "Oswald", sans-serif;
+  mix-blend-mode: screen;
+  animation: fadeIn 2.5s linear forwards;
+  background-color: #ffad01;
+  /* letter-spacing: 10px;
+  background: linear-gradient(
+    to right,
+    red,
+    turquoise,
+    yellow
+  ); Adjust gradient colors as needed */
+  -webkit-background-clip: text; /* Clip text to background gradient */
+  -webkit-text-fill-color: transparent;
   
-  .apptext{
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    margin-top: -5px;
-    margin: 5px;
-    border-radius: 32px; 
+}
+
+.glide {
+  color: FFAD01;
+  margin-left: 5px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-  .apptitle{
-    font-size: 15em;
-    font-weight: bold;
-    margin-bottom: -2px;
+  100% {
+    opacity: 1;
   }
-  
-  .booking {
-    font-size: 5em;
-    margin-bottom: 5px;
-  }
-  
-  .appslogan {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .appdescr {
-    text-align: left;
-    font-size: 1.5em;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .login-signup {
-    margin-top: 30px;
-    font-size: 4em;
-  }
-  
-  .driverlogin {
-    font-family: PlusJakartaSans, -apple-system, BlinkMacSystemFont, Segoe UI,
-      Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif;
-    font-size: 1rem;
-    align-items: center;
-    height: 48px;
-    border-radius: 0.4rem;
-    font-weight: 600;
-    padding: 0 1.2rem;
-    color: #ddd;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0.5rem 1rem rgba(143, 142, 142, 0.15) !important;
-    margin-right: 10px;
-    background: #000000;
-  }
-  
-  .driverlogin:hover {
-    background: #2b2a2a;
-  }
+}
+
+.app-slogan {
+  font-size: 3em;
+  font-family: "Playfair Display", serif; /* Use Playfair Display font */
+  font-style: italic; /* Italicize the font */
+  text-shadow: 0rem -0.5rem 3.1rem #ffad01 !important;
+  margin-top: 0px;
+  color: whitesmoke;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.appdescr {
+  text-align: left;
+  font-size: 1.5em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.login-signup {
+  margin-top: 40px;
+  font-size: 2em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 1000;
+}
+
+.driverlogin {
+  font-family: "Oswald", sans-serif;
+  margin-top: 30px;
+  font-size: 1rem;
+  align-items: center;
+  height: 48px;
+  border-radius: 20px;
+  font-weight: 800;
+  padding: 0 1.2rem;
+  color: #ddd;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0rem -0.5rem 3.1rem #ffad01 !important;
+  margin-right: 10px;
+  color: rgb(37, 37, 37);
+  background: rgb(255, 252, 253);
+  background: #ffad01;
+}
+
+.driverlogin:hover {
+  background: turquoise;
+  box-shadow: 0rem -0.5rem 4.1rem turquoise !important;
+}

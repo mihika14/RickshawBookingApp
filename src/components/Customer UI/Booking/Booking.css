@@ -1,0 +1,99 @@
+.booking-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.booking-form {
+  max-width: 350px;
+  border-radius: 20px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  background: rgb(209 200 200 / 10%);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0) inset;
+  padding: 20px;
+  border: 2px solid #ffad01;
+}
+
+.booking-header {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffad01;
+  text-align: center;
+}
+
+.booking-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.booking-input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 11px;
+}
+
+.booking-label {
+  font-size: 1rem;
+}
+
+.track-btn {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  padding: 10px;
+  background-color: #ffad01;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 10%;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+.booking-btn:hover {
+  background-color: #0056b3;
+}
+
+.book-submit{
+  margin-top: 15px;
+  align-items: center;
+  text-align: center;
+  margin: 10 auto;
+  z-index: 9999;
+  padding: 10px;
+  background-color: #ffad01;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+.booking-label{
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+.booknow-drivers{
+  color: #ffad01;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}

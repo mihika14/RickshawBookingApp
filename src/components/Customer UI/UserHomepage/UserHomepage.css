@@ -1,100 +1,150 @@
-.driverhomepage {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    margin: 50px;
-    margin-left: 224px;
+.userhome-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: #f1faee;
+  font-family: "Oswald", sans-serif;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  background-color: rgb(209 200 200 / 10%);
+  border: 2px solid #ffad01;
+}
+
+.userhome-heading {
+  font-weight: 1000;
+  text-align: center;
+  flex: 1;
+  color: whitesmoke;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 0rem -0.5rem 3.1rem #ffad01 !important;
+}
+
+.userhome-logo {
+  width: 160px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.user-options {
+  margin-right: 10px;
+}
+
+.userbook-rickshaw {
+  width: 100px;
+  border: none;
+  outline: none;
+  background-color: #ffad01;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  transform: 0.3s ease;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  margin-right: 20px;
+}
+
+.userbook-rickshaw:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #9ec8b9, inset -4px -4px 12px #9ec8b9;
+}
+
+.userhome-icon-container {
+  font-size: 37px;
+  position: relative;
+  cursor: pointer;
+  color: #ffad01;
+}
+
+.usersign-out-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  font-size: 10px;
+  background-color: #ffad01;
+  color: #ffad01;
+  z-index: 1;
+  font-family: "Oswald", sans-serif;
+}
+
+.sign-out-options p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.userhome-driver {
+  text-align: center;
+  margin-top: 40px;
+  color: #1d3557;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-weight: 1000;
+}
+
+.user-table {
+  flex: 1;
+  overflow-x: auto;
+  margin: 0 10px; 
+}
+
+.user-homepage {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+.user-fare {
+  /* flex: 1;  */
+  max-width: 50%; 
+  margin: 0 10px; 
+  margin-right: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .driverhomepage {
+    margin: 50px auto;
+    width: 90%;
   }
-  
-  .left-side {
+
+  .left-side,
+  .right-side {
     flex: 1;
   }
-  
-  .right-side {
-    flex: 2;
+
+  .header-home {
+    flex-direction: row;
   }
-  
+
   .home-header {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #333; /* Set your desired background color */
-    color: #fff; /* Set your desired text color */
+    height: 86px;
   }
-  
+
   .logo {
-    width: 121px; /* Set the width of your logo as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add margin for spacing between logo and text */
+    display: none;
   }
-  
+
+  .home-heading {
+    font-size: 32px;
+  }
+
   .user-icon-container {
-    margin-right: 10px;
-    font-size: 37px;
-    position: relative;
-    cursor: pointer;
+    margin-right: 0;
   }
-  
+
   .sign-out-options {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 150px;
-    text-align: center;
-    font-size: 20px;
-    background-color: #fff;
-    color: #262121;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    width: 138%;
+    font-size: 13px;
+    margin-top: 10px;
   }
-  
-  .sign-out-options p {
-    margin: 0;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .driverhomepage {
-      margin: 50px auto; 
-      width: 90%; 
-    }
-  
-    .left-side,
-    .right-side {
-      flex: 1;
-    }
-  
-    .header-home{
-      flex-direction: row;
-    }
-  
-    .home-header {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      height: 86px;
-    }
-  
-    .logo {
-      display: none;
-    }
-  
-    .home-heading{
-      font-size: 32px;
-    }
-  
-    .user-icon-container {
-      margin-right: 0;
-    }
-  
-    .sign-out-options {
-      width: 138%;
-      font-size: 13px;
-      margin-top: 10px 
-    }
-  }
-  
+}

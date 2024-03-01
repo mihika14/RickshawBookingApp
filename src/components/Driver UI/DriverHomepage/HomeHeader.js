@@ -3,6 +3,7 @@ import "./DriverHomepage.css";
 import logo from "./logo.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const HomeHeader = () => {
   const [showSignOut, setShowSignOut] = useState(false);
@@ -12,6 +13,10 @@ const HomeHeader = () => {
   };
 
   const handleSignOut = () => {
+    Swal.fire({
+      icon: "success",
+      text: "logged out",
+    });
     
     console.log("Signing out...");
   };

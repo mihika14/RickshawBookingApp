@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Form.css";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import axios from "axios";
+import Swal from 'sweetalert2'
 
 function SignUp() {
+  const navigate= useNavigate()
   const [fullName, setFullName] = useState(" ");
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
@@ -14,6 +16,15 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!fullName || !email || !password || !phoneNumber || !age) {
+      Swal.fire({
+        icon: "error",
+        title: "Missing Field",
+        text: "Please fill in all fields",
+      });
+      return;
+    } 
     try {
       const response = await axios.post(
         "http://localhost:5000/registerdriver",
@@ -27,12 +38,24 @@ function SignUp() {
       );
 
       if (response.status === "ok") {
+        navigate('/driverhomepage')
         setSuccess(true);
         setError(null);
+        Swal.fire({
+          icon: "success",
+          text: "Registered",
+        });
       }
-    } catch (error) {
-      setError(error.response?.data.error || "Something went wrong");
-      setSuccess(false);
+    }  catch (error) {
+      if (error.response?.status === 409) { 
+        Swal.fire({
+          icon: "warning",
+          title: "User Already Exists",
+          text: "Please use a different email",
+        });
+      } else {
+        setError(error.response?.data.error || "Something went wrong");
+      }
     }
   };
 
@@ -40,10 +63,10 @@ function SignUp() {
     <div className="driverform">
       <form class="form" onSubmit={handleSubmit}>
         <p class="title">Register </p>
-        <p class="message">Signup now and get full access to our app. </p>
+        <p class="message">*Signup now and get full access to our app* </p>
         <div class="flex">
-          <label>
-            <span>Full Name</span>
+          <label >
+            <span className="label">Full Name</span>
             <input
               required=""
               placeholder=""
@@ -56,7 +79,7 @@ function SignUp() {
         </div>
 
         <label>
-          <span>Email</span>
+          <span className="label">Email</span>
           <input
             required=""
             placeholder=""
@@ -68,7 +91,7 @@ function SignUp() {
         </label>
 
         <label>
-          <span>Password</span>
+          <span className="label">Password</span>
           <input
             required=""
             placeholder=""
@@ -80,7 +103,7 @@ function SignUp() {
         </label>
 
         <label>
-          <span>Phone Number</span>
+          <span className="label">Phone Number</span>
           <input
             required=""
             placeholder=""
@@ -91,8 +114,8 @@ function SignUp() {
           />
         </label>
 
-        <label>
-          <span>Age</span>
+        <label >
+          <span className="label">Age</span>
           <input
             required=""
             placeholder=""

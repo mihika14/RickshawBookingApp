@@ -6,6 +6,7 @@ import DriverHomepage from "./components/Driver UI/DriverHomepage/DriverHomepage
 import LoginCust from "./components/Customer UI/Login&Register/LoginCust";
 import RegisterCust from "./components/Customer UI/Login&Register/RegisterCust";
 import UserHome from "./components/Customer UI/UserHomepage/UserHome";
+import Booking from "./components/Customer UI/Booking/Booking";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
         <Route exact path="/customerlogin" element={<LoginCust />} />
         <Route exact path="/customerregister" element={<RegisterCust />} />
         <Route exact path="/customerhomepage" element={<UserHome />} />
+        <Route exact path="/booking" element={<Booking/>} />
       </Routes>
+     
     </div>
   );
 }

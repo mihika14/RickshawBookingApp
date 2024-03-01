@@ -15,19 +15,33 @@
   flex: 2;
 }
 
+.top-ratings{
+  color: #ffad01;
+  font-family: "Oswald", sans-serif;
+  font-weight: 1000;
+}
+
 .home-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #333; /* Set your desired background color */
-  color: #fff; /* Set your desired text color */
+  background-color: rgb(209 200 200 / 10%);
+  border: 2px solid #ffad01;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.home-heading{
+  color: #F1FAEE;
+  font-family: "Oswald", sans-serif;
+  font-weight: 1000;
 }
 
 .logo {
-  width: 121px; /* Set the width of your logo as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Add margin for spacing between logo and text */
+  width: 121px; 
+  height: auto; 
+  margin-right: 10px;
 }
 
 .user-icon-container {
@@ -35,6 +49,7 @@
   font-size: 37px;
   position: relative;
   cursor: pointer;
+  color: #ffad01;
 }
 
 .sign-out-options {
