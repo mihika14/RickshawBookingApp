@@ -1,5 +1,5 @@
 .rickshaw-gif {
-  height: 200px;
+  height: 121px;
   position: fixed;
   top: -10px;
   left: 50%;
@@ -10,7 +10,7 @@
 }
 
 .rickshaw2-gif {
-  height: 200px;
+  height: 121px;
   z-index: 9999;
   transform: scaleX(-1);
   animation: moveLeft 30s linear infinite;
@@ -51,7 +51,7 @@
   padding: 10px;
   margin-top: 30px;
   border-radius: 32px;
-  box-shadow: 0rem -0.5rem 3.1rem #ffad01 !important;
+  box-shadow: 0rem -0.5rem 3.1rem #ffad01 ;
 }
 
 .apptitle {
@@ -137,4 +137,50 @@
 .driverlogin:hover {
   background: turquoise;
   box-shadow: 0rem -0.5rem 4.1rem turquoise !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    font-size: 52px;
+    padding: 30px;
+  }
+
+  .apptext {
+    height: auto;
+    box-shadow: none;
+  }
+
+  .rickshaw-gif,
+  .rickshaw2-gif {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .apptext {
+    display: flex;
+    padding: 5px;
+    box-shadow: none;
+    flex-direction: column;
+    height: 75vh;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .apptitle {
+    font-size: 52px;
+  }
+
+  .app-slogan {
+    font-size: 26px;
+  }
+
+  .login-signup {
+    font-size: 0.5em;
+  }
+
+  .driverlogin {
+    font-size: 0.8rem;
+  }
 }

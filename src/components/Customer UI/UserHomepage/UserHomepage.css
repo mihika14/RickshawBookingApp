@@ -107,11 +107,16 @@
   margin-right: 100px;
 }
 
-
 @media (max-width: 768px) {
-  .driverhomepage {
+  .user-homepage {
     margin: 50px auto;
-    width: 90%;
+    width: 100%;
+    flex-direction: column-reverse; 
+    align-items: center; 
+  }
+
+  .user-fare {
+    margin-bottom: 20px;
   }
 
   .left-side,
@@ -130,16 +135,17 @@
     height: 86px;
   }
 
-  .logo {
+  .userhome-logo {
     display: none;
   }
 
-  .home-heading {
-    font-size: 32px;
+  .userhome-heading {
+    font-size: 22px;
+    display: none;
   }
 
-  .user-icon-container {
-    margin-right: 0;
+  .userhome-icon-container {
+    margin-right: -200px;
   }
 
   .sign-out-options {
@@ -147,4 +153,11 @@
     font-size: 13px;
     margin-top: 10px;
   }
+
+  .fare-form{
+    width: 100%;
+  }
+
 }
+
+

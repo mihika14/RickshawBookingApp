@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
-import { Link, useMatch } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import '@sweetalert2/theme-dark/dark.css';
 
 function LoginCust() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
@@ -24,22 +23,22 @@ function LoginCust() {
         navigate("/customerhomepage");
         Swal.fire({
           icon: "success",
-          text: "You have succesfully logged in",
+          text: "You have successfully logged in",
         });
       }
     } catch (error) {
-      setError("Ibvalid UserName or Password");
+      setError("Invalid UserName or Password");
       Swal.fire({
         icon: "warning",
-        title:"Invalid credentials!",
-    })
+        title: "Invalid credentials!",
+      });
     }
   };
 
   return (
     <div className="driverform">
-      <form class="form" onSubmit={handleSubmit}>
-        <p class="title">Login as User </p>
+      <form className="form" onSubmit={handleSubmit}>
+        <p className="title">Login as User </p>
 
         <label>
           <span className="form-title">Email</span>
@@ -47,7 +46,7 @@ function LoginCust() {
             required=""
             placeholder=""
             type="email"
-            class="input"
+            className="input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -59,13 +58,13 @@ function LoginCust() {
             required=""
             placeholder=""
             type="password"
-            class="input"
+            className="input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-          <button type="submit" className="submit">Submit</button>
-        <p class="signin">
+        <button type="submit" className="submit">Submit</button>
+        <p className="signin">
           Don't have an account ? <Link to="/customerregister">SignUp</Link>{" "}
         </p>
       </form>

@@ -37,7 +37,7 @@ function SignUp() {
         }
       );
 
-      if (response.status === "ok") {
+      if (response.status === 200) {
         navigate('/driverhomepage')
         setSuccess(true);
         setError(null);
